@@ -1,0 +1,152 @@
+@import "tailwindcss";
+
+/* Night Pro - Dark Elegant Base */
+:root {
+  --background: #15161A;         /* Fondo principal oscuro */
+  --panel: #23272F;              /* Paneles / tarjetas */
+  --sidebar: #1E2126;            /* Sidebar */
+  --sidebar-accent: #8B5CF6;     /* Acento violeta para sidebar activo */
+  --sidebar-link: #F3F4F6;
+  --primary: #8B5CF6;            /* Botón principal violeta */
+  --primary-hover: #7C3AED;      /* Botón hover */
+  --secondary: #374151;          /* Botón secundario gris */
+  --success: #22D3EE;            /* Éxito/cyan */
+  --warning: #FBBF24;            /* Advertencia/amarillo */
+  --danger: #EF4444;             /* Peligro/rojo */
+  --input-bg: #23272F;
+  --input-border: #8B5CF6;
+  --input-placeholder: #B5A6ED;
+  --text: #F3F4F6;               /* Texto principal */
+  --text-light: #C7D2FE;         /* Texto aclarado */
+}
+
+body {
+  background: var(--background);
+  color: var(--text);
+  font-family: 'Inter', 'Space Grotesk', 'Segoe UI', Arial, Helvetica, sans-serif;
+  min-height: 100vh;
+  transition: background 0.2s, color 0.2s;
+}
+
+.bg-panel {
+  background: var(--panel);
+}
+
+.bg-sidebar {
+  background: var(--sidebar);
+}
+
+.text-accent {
+  color: var(--sidebar-accent);
+}
+
+.text-light {
+  color: var(--text-light);
+}
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+  transition: color 0.15s;
+}
+a:hover {
+  color: var(--primary-hover);
+}
+
+input, textarea, select {
+  background: var(--input-bg);
+  color: var(--text);
+  border: 1.5px solid var(--input-border);
+  border-radius: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  margin-bottom: 0.5rem;
+  transition: border 0.2s;
+}
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  border-color: var(--primary-hover);
+  box-shadow: 0 0 0 2px var(--primary);
+}
+::placeholder {
+  color: var(--input-placeholder);
+  opacity: 1;
+}
+
+/* Botones Night Pro */
+.button-main {
+  background: var(--primary);
+  color: var(--text);
+  border: none;
+  padding: 0.5rem 1.2rem;
+  border-radius: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  transition: background 0.15s, box-shadow 0.15s, transform 0.12s;
+  box-shadow: 0 2px 8px 0 rgba(139, 92, 246, 0.14);
+  cursor: pointer;
+}
+.button-main:hover {
+  background: var(--primary-hover);
+  transform: scale(1.04);
+  box-shadow: 0 4px 16px 0 rgba(139, 92, 246, 0.2);
+}
+.button-secondary {
+  background: var(--secondary);
+  color: var(--text-light);
+  border: none;
+  padding: 0.5rem 1.2rem;
+  border-radius: 0.6rem;
+  font-weight: 600;
+  transition: background 0.18s;
+}
+.button-secondary:hover {
+  background: var(--primary);
+  color: var(--text);
+}
+
+/* Tablas Night Pro */
+.table-night {
+  background: var(--panel);
+  color: var(--text);
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+.table-night th, .table-night td {
+  padding: 0.7rem 1.1rem;
+  border-bottom: 1px solid #23243a;
+}
+.table-night th {
+  background: #2a2e38;
+  color: var(--primary);
+  font-weight: 700;
+}
+.table-night tr:last-child td {
+  border-bottom: none;
+}
+.table-night tr:hover {
+  background: #23243a;
+}
+
+/* Scrollbar estilizado dark */
+::-webkit-scrollbar {
+  width: 8px;
+  background: var(--sidebar);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 6px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-hover);
+}
+
+/* Modal overlay Night Pro */
+.modal-overlay {
+  background: rgba(22, 22, 32, 0.72);
+  backdrop-filter: blur(2.5px);
+}
+
+/* Utilidades extra */
+.rounded-xl { border-radius: 1rem; }
+.shadow-xl { box-shadow: 0 8px 32px 0 rgba(80, 60, 160, 0.18); }
+
